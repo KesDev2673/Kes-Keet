@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Keet</title>
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CDN FONTS -->
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container-fluid d-flex justify-content-between" >
+            <img src="./Assets/Images/logo_trans_blue 1.png" class="img-fluid" alt="">
+            <div id="deets" class="d-flex align-items-center">
+                <span id="rect"><img src="./Assets/Images/Rectangle 86.png" alt=""></span>
+                <span id="txt" class="h-75">
+                    <h6>Hi, Gebor Official</h6>
+                    <p class="d-flex align-items-center">8764535373
+                        <button  id="copy-username" title="Copy username" class="btn btn-link p-0">
+                            <img src="./Assets/Images/images-removebg-preview 1.png" alt="">
+                        </button>
+                    </p>
+                </span>
+                <span id="alert"><img src="./Assets/Images/Google Alerts.png" alt=""></span>
+                <span class="hamburger-link">
+                    <i class="bi bi-list text-white hamburger"></i>
+                </span>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="container-fluid landing">
+        <div class="row">
+            <div class="col-3 bg-white menu  container-fluid">
+                <div id="main-menu">
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#mainMenuContent" aria-expanded="false" aria-controls="mainMenuContent" class="toggle-menu collapsed">
+                        Main Menu
+                    </a>
+                    <ul id="mainMenuContent" class="collapse">
+                        <li>
+                            <button>
+                                <img src="./Assets/Images/Hut.png" alt="">
+                                <span>Home</span>
+                            </button>
+                        </li>
+                        <li><img src="./Assets/Images/Basket.png" alt=""> <a href="">Orders</a></li>
+                        <li><img src="./Assets/Images/Wallet.png" alt=""> <a href="">Funds</a></li>
+                        <li><img src="./Assets/Images/Male User.png" alt=""> <a href="">My Profile</a></li>
+                    </ul>
+                </div>
+            
+                <div id="acct-menu">
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#accountMenuContent" aria-expanded="false" aria-controls="accountMenuContent" class="toggle-menu collapsed">
+                        Account Menu
+                    </a>
+                    <ul id="accountMenuContent" class="collapse">
+                        <li><img src="https://img.icons8.com/ios/19/new-post--v1.png" alt=""/> <a href="">Inbox</a></li>
+                        <li><img src="https://img.icons8.com/ios/19/settings--v1.png" alt=""/> <a href="">Settings</a></li>
+                        <li><img src="https://img.icons8.com/ios/19/two-tickets.png" alt=""/> <a href="">My Tickets</a></li>
+                        <li><img src="https://img.icons8.com/ios/19/add-user-group-man-man--v1.png" alt=""/> <a href="">Refer a Friend</a></li>
+                        <li><img src="https://img.icons8.com/ios/19/exit--v1.png" alt=""/> <a href="">Logout</a></li>
+                    </ul>
+                </div>
+
+                <div id="support" class="container  container-fluid">
+                    <p>Need Support?</p>
+                    <p>Send a message to our support</p>
+                    <button>New Ticket</button>
+                </div>
+            </div>
+
+            <div class="col-6 dash">
+                <div class="container c-rect text-white">
+                    <h6 class="fw-light">Wallet</h6>
+                    <p class="fw-lighter mt-3">Available Balance</p>
+                    <h6 class="fw-light">NGN 9,500.00</h6>
+                    <button class="rounded text-white">
+                        <img src="./Assets/Images/Yandex Money.png" alt=""> Top Up
+                    </button>
+                    <div class="dets">
+                        <span id="rect"><img src="./Assets/Images/Rectangle 86.png" alt=""></span>
+                        <span id="txt" class="h-75">
+                            <h6>Hi, Gebor Official <p>Welcome Back</p></h6>
+                            <p class="d-flex align-items-center">8764535373
+                                <button  id="copy-username" title="Copy username" class="btn btn-link p-0">
+                                    <img src="./Assets/Images/images-removebg-preview 1.png" alt="">
+                                </button>
+                            </p>
+                        </span>
+                    </div>
+                    <div class="inner d-flex">
+                        <div class="inner-dash1 bg-white text-black rounded box">
+                            <h6>Total Deposit</h6>
+                            <p>₦51,000</p>
+                        </div>
+                        <div class="inner-dash2 bg-white text-black rounded box">
+                            <h6>Funds Spent</h6>
+                            <p>₦51,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container c">
+                    <div class="d-flex justify-content-between head">
+                        <p>Transactions</p>
+                        <p class="d-flex gap-3">Filter by <img width="17" height="17" src="https://img.icons8.com/ios/17/sorting-options--v1.png" alt="sorting-options--v1" id="filter-icon" style="cursor: pointer;"/></p>
+                    </div>
+                    <div class="d-flex" id="content-wrapper">
+                        <div class="cont bg-white rounded">
+                            <div class="wal">
+                                 <div class="wall">
+                                     <img src="./Assets/Images/4803539-middle 1.png" alt="">
+                                 </div>
+                                 <div class="act">
+                                     <p style="font-weight: 500;">Wallet Top up</p>
+                                     <p style="color: #8D8D8E; margin-top: 5px;">Deposit via Bank Transfer</p>
+                                     <p style="color: #CCCCCC; margin-top: 5px;">27 May 2024 07:23 AM</p>
+                                 </div>
+                                 <div class="st">
+                                     <p style="color: #383838;">₦51,000</p>
+                                     <p class="rounded" style="background-color: #D4EDDA; color: #155724; font-weight: 300; padding: 2px 5px;">Success</p>
+                                 </div>
+                            </div>
+                            
+                            <div class="fund">
+                                 <div class="wall">
+                                     <img src="./Assets/Images/favicon 1.png" alt="">
+                                 </div>
+                                 <div class="act">
+                                     <p style="font-weight: 500;">Funds Spent</p>
+                                     <p style="color: #8D8D8E; margin-top: 5px;">Place Order</p>
+                                     <p style="color: #CCCCCC; margin-top: 5px;">27 May 2024 07:23 AM</p>
+                                 </div>
+                                 <div class="st">
+                                     <p style="color: #383838;">₦1,500</p>
+                                     <p class="rounded" style="background-color: #D4EDDA; color: #155724; font-weight: 300; padding: 2px 5px;">Success</p>
+                                 </div>
+                            </div>
+     
+                            <div class="fund">
+                                 <div class="wall">
+                                     <img src="./Assets/Images/favicon 1.png" alt="">
+                                 </div>
+                                 <div class="act">
+                                     <p style="font-weight: 500;">Funds Spent</p>
+                                     <p style="color: #8D8D8E; margin-top: 5px;">Place Order</p>
+                                     <p style="color: #CCCCCC; margin-top: 5px;">27 May 2024 07:23 AM</p>
+                                 </div>
+                                 <div class="st">
+                                     <p style="color: #383838;">₦5,000</p>
+                                     <p class="rounded" style="background-color: #D4EDDA; color: #155724; font-weight: 300; padding: 2px 5px;">Success</p>
+                                 </div>
+                            </div>
+     
+                            <div class="fund">
+                                 <div class="wall">
+                                     <img src="./Assets/Images/favicon 1.png" alt="">
+                                 </div>
+                                 <div class="act">
+                                     <p style="font-weight: 500;">Funds Spent</p>
+                                     <p style="color: #8D8D8E; margin-top: 5px;">Place Order</p>
+                                     <p style="color: #CCCCCC; margin-top: 5px;">27 May 2024 07:23 AM</p>
+                                 </div>
+                                 <div class="st">
+                                     <p style="color: #383838;">₦500</p>
+                                     <p class="rounded" style="background-color: #D4EDDA; color: #155724; font-weight: 300; padding: 2px 5px;">Success</p>
+                                 </div>
+                            </div>
+                         </div>
+     
+                         <div class="conta bg-white rounded" style="display: none; margin-left: 20px;">
+                             <p>All</p>
+                             <p>Wallet Top up</p>
+                             <p>Funds Spent</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 ads mx-auto">
+                <a href="">
+                    <img src="./Assets/Images/launchad 1.png" alt="">
+                </a>
+                <div class="container ad rounded mt-4 d-flex gap-3 p-2">
+                    <img src="./Assets/Images/transparent-emoji-megaphone-amplifying-sound-metal-object-open-empty-megaphone-emitting-light-beams-in-dark65fe5d545c21e9 1.png" alt="">
+                    <div class="text  text-white">
+                        <p>Buy your next social media</p>
+                        <p>account on our platform</p>
+                        <button class="bg-black text-white rounded mt-2">KEETP2P.COM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="container foot">
+            <div>
+                <img src="./Assets/Images/Hut-foot.png" alt="">
+                <p>Home</p>
+            </div>
+            <div style="color: #8D8D8E;">
+                <img src="./Assets/Images/Basket (1).png" alt="">
+                <p>Orders</p>
+            </div>
+            <div style="color: #8D8D8E;">
+                <img src="./Assets/Images/Wallet (1).png" alt="">
+                <p>Funds</p>
+            </div>
+            <div style="color: #8D8D8E;">
+                <img src="./Assets/Images/Male User (1).png" alt="">
+                <p>Profile</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Assets/JS/app.js"></script>
+</body>
+</html>
