@@ -25,7 +25,7 @@ body{
 
 nav{
     background-color: #0d0733;
-    width: 100vw;
+    width: 100%;
     padding: 10px 20px;
 }
 
@@ -77,7 +77,6 @@ nav{
 
 #main-menu{
     padding: 15px;
-    font-size: 13px;
 }
 
 #main-menu ul li{
@@ -102,7 +101,6 @@ nav{
 
 #acct-menu{
     padding: 15px;
-    font-size: 13px;
 }
 
 #acct-menu ul li{
@@ -166,9 +164,9 @@ nav{
 }
 
 .dash{
-    padding: 0px 30px;
     border-right: 1px solid gainsboro;
     margin-top: 20px;
+    padding: 0 30px;
 }
 
 .c-rect{
@@ -176,10 +174,9 @@ nav{
     border-bottom-right-radius: 37px;
     background: linear-gradient(258.53deg, #2C9BFF 1.88%, #237CCC 37.16%, #1A5D99 98.12%);
     margin-top: 15px;
-    width: 350px;
+    width: 100%;
     height: 200px;
     padding: 20px;
-    font-size: 10px;
 }
 
 .c-rect button{
@@ -202,37 +199,36 @@ nav{
 }
 
 .box{
-    padding: 15px 30px 0 10px;
-    width: 120px;
-    height: 60px;
+    padding: 15px 30px 10px 10px;
+    width: fit-content;
+    height: fit-content;
     margin: auto;
     font-weight: 500;
 }
 
 .box h6{
-    font-size: 10px;
     color: #8D8D8E;
 }
 
 .box p{
     margin: 0;
-    font-size: 11px;
     color: #505050;
 }
 
 .c{
     margin-top: 60px;
-    width: fit-content;
+    width: 100%;
+    padding-bottom: 10px;
 }
 
 .head{
-    font-size: 10px;
     color: #505050;
     font-weight: 500;
 }
 
 .cont{
-    padding: 40px 10px 2px 10px;
+    padding: 40px 10px 10px 10px;
+    width: 100%;
 }
 
 .wal{
@@ -264,41 +260,29 @@ nav{
 }
 
 .act p{
-    font-size: 11px;
     margin: 0;
 }
 
-.st p{
-    font-size: 11px;
+.ads{
+    padding: 35px 0;
 }
 
-.ads{
-    padding: 35px 40px;
+.y{
+    width: fit-content;
 }
 
 .ad{
     background-color: #A5946A;
+    width: fit-content;
+    margin: auto;
 }
 
 .text p{
     margin: 0;
-    font-size: 13px;
 }
 
 .text button{
-    font-size: 10px;
     padding: 5px 20px;
-}
-
-.conta{
-    padding: 20px 10px 0 10px;
-    width: fit-content;
-    height: fit-content;
-}
-
-.conta p{
-    font-size: 11px;
-    font-weight: 500;
 }
 
 footer{
@@ -306,7 +290,7 @@ footer{
 }
 
 /* Mobile View */
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 575px) {
     /* Ensure nav stays visible at the top */
     nav {
         position: fixed;
@@ -316,20 +300,20 @@ footer{
         z-index: 20; /* Keep nav above the .menu */
     }
 
-    /* Menu takes full width but leaves space for the nav */
     .menu {
-        display: none;
-        position: fixed; /* Position relative to the viewport */
+        position: fixed;
         top: 51px; /* Leave space for the nav */
-        left: 0;
-        width: 100%;
+        left: -250px; /* Start off-screen */
+        width: 250px; /* Set a width that looks good */
         height: calc(100vh - 51px); /* Full height minus nav */
         background-color: #0d0733; /* Same as the nav background */
         z-index: 10; /* Keep it below the nav */
+        transition: left 0.3s ease; /* Smooth transition effect */
+        overflow-y: auto; /* In case the content overflows */
     }
-
+    
     .menu.open {
-        display: block;
+        left: 0; /* Bring the menu into view */
     }
 
     /* Hide the txt and rect elements on mobile */
@@ -359,14 +343,16 @@ footer{
     .dash {
         width: 100%;
         border-right: none;
-        padding: 0 5px;
+        padding: 0 10px;
     }
 
     .c-rect{
-        height: 270px;
+        height: 250px;
+        width: 100%;
     }
 
     .inner{
+        position: relative;
         bottom: 150px;
     }
 
@@ -396,12 +382,13 @@ footer{
 
     .c-rect #txt h6{
         margin: 0;
+        font-size: 13px;
     }
 
     .c-rect #txt p:nth-child(1){
         margin: 0;
         font-weight: lighter;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .c-rect #txt p:nth-child(2){
@@ -435,6 +422,183 @@ footer{
 
     .ad{
         width: fit-content;
+    }
+
+    footer{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 10px;
+        background-color: white;
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
+        box-shadow: 0px 0px 4px 0px #00000040;
+    }
+    
+    .foot{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .foot div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1150px) {
+    /* Ensure nav stays visible at the top */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 20; /* Keep nav above the .menu */
+    }
+
+    .menu {
+        position: fixed;
+        top: 51px; /* Leave space for the nav */
+        left: -250px; /* Start off-screen */
+        width: 250px; /* Set a width that looks good */
+        height: calc(100vh - 51px); /* Full height minus nav */
+        background-color: #0d0733; /* Same as the nav background */
+        z-index: 10; /* Keep it below the nav */
+        transition: left 0.3s ease; /* Smooth transition effect */
+        overflow-y: auto; /* In case the content overflows */
+    }
+    
+    .menu.open {
+        left: 0; /* Bring the menu into view */
+    }
+
+    /* Hide the txt and rect elements on mobile */
+    #rect, #txt {
+        display: none;
+    }
+
+    /* Display the hamburger button */
+    .hamburger-link {
+        display: block;
+        padding: 5px;
+    }
+
+    .hamburger {
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .hamburger-link:active {
+        transform: scale(0.95);
+        transition: background-color 0.2s, transform 0.2s;
+        border-radius: 50%;
+        background-color: #1a1d32;
+    }
+
+    .dash{
+        width: 50%;
+    }
+
+    .c-rect{
+        font-size: 15px;
+        height: 260px;
+        width: 100%;
+    }
+
+    .dets{
+        display: flex;
+        align-items: center;
+        color: white;
+        gap: 10px;
+        height: 65px;
+        width: fit-content;
+        position: relative;
+        left: 50%;
+        bottom: 100px
+    }
+
+    .c-rect #rect{
+        display: block;
+        margin: 0;
+    }
+
+    .c-rect #txt {
+        display: block;
+        gap: 10px;
+        height: 30px;
+        width: 100%;
+    }
+
+    .c-rect #txt h6{
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .c-rect #txt p:nth-child(1){
+        margin: 0;
+        font-weight: lighter;
+        font-size: 12px;
+    }
+
+    .c-rect #txt p:nth-child(2){
+        font-weight: 400;
+        height: 20px;
+        width: fit-content;
+        gap: 10px;
+    }
+
+    .c-rect #txt p:nth-child(2) button{
+        background: transparent;
+        margin-bottom: 15px;
+    }
+
+    .box h6{
+        font-size: 13px;
+    }
+
+    .box p{
+        font-size: 15px;
+    }
+
+    .c{
+        width: 100%;
+        margin-top: 100px;
+    }
+    
+    .head{
+        font-size: 15px;
+    }
+
+    .cont{
+        width: 100%;
+    }
+
+    .act p{
+        font-size: 15px;
+        margin: 0;
+    }
+    
+    .st p{
+        font-size: 15px;
+    }
+
+    .ads{
+        width: 50%;
+    }
+    
+    .text p{
+        margin: 0;
+        font-size: 17px;
+    }
+    
+    .text button{
+        font-size: 13px;
+        padding: 5px 20px;
     }
 
     footer{

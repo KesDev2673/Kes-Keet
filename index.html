@@ -111,11 +111,23 @@
                 <div class="container c">
                     <div class="d-flex justify-content-between head">
                         <p>Transactions</p>
-                        <p class="d-flex gap-3">Filter by <img width="17" height="17" src="https://img.icons8.com/ios/17/sorting-options--v1.png" alt="sorting-options--v1" id="filter-icon" style="cursor: pointer;"/></p>
+                        <div class="d-flex gap-3">
+                            <p class> Filter by</p>
+                            <div class="dropdown d-inline">
+                                <button class="border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img width="17" height="17" src="https://img.icons8.com/ios/17/sorting-options--v1.png" alt="" style="cursor: pointer;"/>
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All</a></li>
+                                <li><a class="dropdown-item" href="#">Wallet Top up</a></li>
+                                <li><a class="dropdown-item" href="#">Funds Spent</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex" id="content-wrapper">
+                    <div id="content-wrapper">
                         <div class="cont bg-white rounded">
-                            <div class="wal">
+                            <a href="" class="wal" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                  <div class="wall">
                                      <img src="./Assets/Images/4803539-middle 1.png" alt="">
                                  </div>
@@ -128,9 +140,9 @@
                                      <p style="color: #383838;">₦51,000</p>
                                      <p class="rounded" style="background-color: #D4EDDA; color: #155724; font-weight: 300; padding: 2px 5px;">Success</p>
                                  </div>
-                            </div>
+                            </a>
                             
-                            <div class="fund">
+                            <a href="" class="fund">
                                  <div class="wall">
                                      <img src="./Assets/Images/favicon 1.png" alt="">
                                  </div>
@@ -143,9 +155,9 @@
                                      <p style="color: #383838;">₦1,500</p>
                                      <p class="rounded" style="background-color: #D4EDDA; color: #155724; font-weight: 300; padding: 2px 5px;">Success</p>
                                  </div>
-                            </div>
+                            </a>
      
-                            <div class="fund">
+                            <a href="" class="fund">
                                  <div class="wall">
                                      <img src="./Assets/Images/favicon 1.png" alt="">
                                  </div>
@@ -158,9 +170,9 @@
                                      <p style="color: #383838;">₦5,000</p>
                                      <p class="rounded" style="background-color: #D4EDDA; color: #155724; font-weight: 300; padding: 2px 5px;">Success</p>
                                  </div>
-                            </div>
+                            </a>
      
-                            <div class="fund">
+                            <a href="" class="fund">
                                  <div class="wall">
                                      <img src="./Assets/Images/favicon 1.png" alt="">
                                  </div>
@@ -173,22 +185,18 @@
                                      <p style="color: #383838;">₦500</p>
                                      <p class="rounded" style="background-color: #D4EDDA; color: #155724; font-weight: 300; padding: 2px 5px;">Success</p>
                                  </div>
-                            </div>
-                         </div>
-     
-                         <div class="conta bg-white rounded" style="display: none; margin-left: 20px;">
-                             <p>All</p>
-                             <p>Wallet Top up</p>
-                             <p>Funds Spent</p>
-                         </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-3 ads mx-auto">
-                <a href="">
-                    <img src="./Assets/Images/launchad 1.png" alt="">
-                </a>
+            <div class="col-3 ads">
+                <div class="container y">
+                    <a href="">
+                        <img src="./Assets/Images/launchad 1.png" alt="">
+                    </a>
+                </div>
                 <div class="container ad rounded mt-4 d-flex gap-3 p-2">
                     <img src="./Assets/Images/transparent-emoji-megaphone-amplifying-sound-metal-object-open-empty-megaphone-emitting-light-beams-in-dark65fe5d545c21e9 1.png" alt="">
                     <div class="text  text-white">
@@ -200,6 +208,31 @@
             </div>
         </div>
     </section>
+    
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content px-4 p">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="bg-secondary-subtle p-2 text-center rounded-3">Transaction Details</p>
+            <div class="bg-secondary-subtle p-2 rounded-3 mt-5">
+                <p>Transaction ID</p>
+                <h6>U98409029D</h6>
+                <p>Amount</p>
+                <h6>₦51,000</h6>
+                <p>Remark</p>
+                <h6>Place Order</h6>
+                <p>Time</p>
+                <h6>27 May 2024 07:23 AM</h6>
+            </div>
+            <p class="bg-danger-subtle p-2 text-center rounded-3 mt-5">Report Dispute</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <footer class="container-fluid">
         <div class="container foot">

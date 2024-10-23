@@ -7,17 +7,6 @@ document.getElementById('copy-username').addEventListener('click', function() {
     });
 });
 
-document.getElementById("filter-icon").addEventListener("click", function() {
-    const contaElement = document.querySelector('.conta');
-    
-    // Toggle visibility of 'conta' element
-    if (contaElement.style.display === "none") {
-        contaElement.style.display = "block";
-    } else {
-        contaElement.style.display = "none";
-    }
-});
-
 document.querySelector('.hamburger-link').addEventListener('click', function() {
     // Toggle the "open" class on the .menu element
     document.querySelector('.menu').classList.toggle('open');
